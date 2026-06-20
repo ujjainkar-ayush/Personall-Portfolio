@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PORTFOLIO | Ayush Ujjainkar</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "error-container": "#93000a",
+                      "on-surface": "#e5e2e1",
+                      "tertiary-container": "#0a0a0a",
+                      "surface-variant": "#353434",
+                      "background": "#141313",
+                      "on-tertiary-fixed": "#1b1c1c",
+                      "inverse-on-surface": "#313030",
+                      "tertiary": "#c8c6c6",
+                      "surface-container": "#201f1f",
+                      "primary-fixed-dim": "#c9c6c5",
+                      "secondary-fixed-dim": "#c8c6c5",
+                      "on-surface-variant": "#c4c7c7",
+                      "on-tertiary": "#303030",
+                      "tertiary-fixed-dim": "#c8c6c6",
+                      "secondary-container": "#474746",
+                      "on-background": "#e5e2e1",
+                      "tertiary-fixed": "#e4e2e1",
+                      "surface-container-high": "#2b2a2a",
+                      "on-primary-fixed-variant": "#474646",
+                      "surface-bright": "#3a3939",
+                      "surface-container-highest": "#353434",
+                      "on-secondary-fixed": "#1c1b1b",
+                      "surface": "#141313",
+                      "surface-container-low": "#1c1b1b",
+                      "primary-container": "#0a0a0a",
+                      "inverse-surface": "#e5e2e1",
+                      "on-tertiary-container": "#7a7979",
+                      "on-tertiary-fixed-variant": "#474747",
+                      "on-error-container": "#ffdad6",
+                      "on-primary-container": "#7b7979",
+                      "primary": "#c9c6c5",
+                      "surface-container-lowest": "#0e0e0e",
+                      "on-error": "#690005",
+                      "primary-fixed": "#e5e2e1",
+                      "on-secondary-container": "#b7b5b4",
+                      "surface-tint": "#c9c6c5",
+                      "outline": "#8e9192",
+                      "on-primary": "#313030",
+                      "on-secondary": "#313030",
+                      "inverse-primary": "#5f5e5e",
+                      "surface-dim": "#141313",
+                      "secondary": "#c8c6c5",
+                      "error": "#ffb4ab",
+                      "outline-variant": "#444748",
+                      "on-primary-fixed": "#1c1b1b",
+                      "secondary-fixed": "#e5e2e1",
+                      "on-secondary-fixed-variant": "#474746"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "section-gap": "160px",
+                      "margin-mobile": "20px",
+                      "stack-md": "16px",
+                      "stack-sm": "8px",
+                      "stack-lg": "32px",
+                      "gutter": "24px",
+                      "container-max": "1200px"
+              },
+              "fontFamily": {
+                      "label-caps": ["Inter"],
+                      "headline-md": ["Inter"],
+                      "body-md": ["Inter"],
+                      "display-lg-mobile": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "display-lg": ["Inter"]
+              },
+              "fontSize": {
+                      "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                      "headline-md": ["32px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                      "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                      "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        html { scroll-behavior: smooth; }
+        body { 
+            background-color: #f7f6f5; 
+            color: #141313; 
+            -webkit-font-smoothing: antialiased; 
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        html.dark body { background-color: #0a0a0a; color: #e5e2e1; }
+        
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+        .section-padding { padding-top: 160px; padding-bottom: 160px; }
+        @media (max-width: 768px) { .section-padding { padding-top: 80px; padding-bottom: 80px; } }
+        
+        .scroll-progress { position: fixed; top: 0; left: 0; height: 2px; background: #c9c6c5; z-index: 100; transition: width 0.1s; }
+        
+        /* Obsidian Minimalist Cards */
+        .obsidian-card { 
+            background: #ffffff; 
+            border: 1px solid #e0e0e0; 
+            transition: border-color 0.3s ease, background-color 0.3s ease; 
+        }
+        html.dark .obsidian-card { 
+            background: #1a1a1a; 
+            border: 1px solid #2e2e2e; 
+        }
+        .obsidian-card:hover { border-color: #141313; }
+        html.dark .obsidian-card:hover { border-color: #c9c6c5; }
+
+        /* Custom selection colors for light mode */
+        ::selection { background-color: #141313; color: #ffffff; }
+        html.dark ::selection { background-color: #c9c6c5; color: #313030; }
+    </style>
+</head>
+<body class="selection:bg-primary selection:text-on-primary">
+<div class="scroll-progress" id="progress" style="width: 0%"></div>
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-surface/80 backdrop-blur-md border-b border-gray-200 dark:border-outline-variant/30 transition-colors">
+<div class="flex justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-gutter h-20">
+<span class="font-headline-md text-headline-md tracking-tighter text-black dark:text-on-surface">AYUSH UJJAINKAR</span>
+<div class="flex items-center gap-stack-lg">
+<div class="hidden md:flex gap-stack-lg items-center">
+<a class="font-label-caps text-label-caps text-black dark:text-primary font-bold border-b-2 border-black dark:border-primary pb-1" href="#home" id="nav-home">Home</a>
+<a class="font-label-caps text-label-caps text-gray-500 dark:text-on-surface-variant hover:text-black dark:hover:text-on-surface transition-colors" href="#about">About</a>
+<a class="font-label-caps text-label-caps text-gray-500 dark:text-on-surface-variant hover:text-black dark:hover:text-on-surface transition-colors" href="#experience">Experience</a>
+<a class="font-label-caps text-label-caps text-gray-500 dark:text-on-surface-variant hover:text-black dark:hover:text-on-surface transition-colors" href="#contact">Contact</a>
+<a href="https://www.dropbox.com/scl/fi/uaaivt7wkpz5fj4qcxfs0/AYUSH-UJJAINKAR-LINKED-IN-PORTFOLIO.pdf?rlkey=jxlh0yk228lzzqhvxx5xu7ihq&st=x791r1w3&dl=0" target="_blank" rel="noopener noreferrer" class="hidden md:block bg-black dark:bg-on-surface text-white dark:text-surface px-6 py-2 font-label-caps text-label-caps hover:scale-95 active:scale-90 transition-transform">Hire Me</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-white/10 transition-colors flex items-center justify-center" id="theme-toggle">
+<span class="material-symbols-outlined text-black dark:text-on-surface" id="theme-toggle-icon">dark_mode</span>
+</button>
+<button class="md:hidden text-black dark:text-on-surface material-symbols-outlined">menu</button>
+</div>
+</div>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="min-h-screen flex items-center justify-start max-w-container-max mx-auto px-margin-mobile md:px-gutter pt-20" id="home">
+<div class="w-full max-w-4xl">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg mb-stack-md leading-none text-black dark:text-on-surface">
+                    "Connecting <span class="text-gray-400 dark:text-primary-fixed-dim">talent</span> and technology, naturally"
+                </h1>
+<p class="font-body-lg text-body-lg text-gray-600 dark:text-on-surface-variant max-w-2xl mb-stack-lg">
+                    Based in Buldhana, Maharashtra — combining recruiting expertise with hands-on AI fluency to find the right people for the right roles.
+                </p>
+<div class="flex gap-stack-md">
+<a class="bg-black dark:bg-on-surface text-white dark:text-surface px-8 py-4 font-label-caps text-label-caps tracking-widest hover:bg-gray-800 dark:hover:bg-primary transition-colors" href="#experience">VIEW WORK</a>
+<a class="border border-black dark:border-on-surface text-black dark:text-on-surface px-8 py-4 font-label-caps text-label-caps tracking-widest hover:bg-black dark:hover:bg-on-surface hover:text-white dark:hover:text-surface transition-all" href="#contact">GET IN TOUCH</a>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="section-padding bg-white dark:bg-surface transition-colors" id="about">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start">
+<div class="md:col-span-4">
+<span class="font-label-caps text-label-caps text-gray-400 dark:text-primary uppercase mb-stack-sm block">01 / Profile</span>
+<h2 class="font-headline-md text-headline-md text-black dark:text-on-surface">About Me</h2>
+</div>
+<div class="md:col-span-8 space-y-stack-lg">
+<p class="font-body-lg text-body-lg text-gray-600 dark:text-on-surface-variant leading-relaxed">
+                            A fresher candidate with a passion for connecting my talent with the right opportunities. I have a strong foundation in recruiting and a keen interest in leveraging AI to enhance the hiring process.</p>
+<p class="font-body-lg text-body-lg text-gray-600 dark:text-on-surface-variant leading-relaxed">
+                            Even if I am a fresher, I am eager to learn and grow in a dynamic environment. I am committed to bringing my best to every role and contributing positively to the team and organization.
+                        </p>
+<div class="pt-stack-md grid grid-cols-2 md:grid-cols-4 gap-stack-md">
+<div>
+<h4 class="font-label-caps text-label-caps text-black dark:text-on-surface mb-2">Location</h4>
+<p class="font-body-md text-body-md text-gray-500 dark:text-on-surface-variant">Buldhana, IN</p>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-black dark:text-on-surface mb-2">Experience</h4>
+<p class="font-body-md text-body-md text-gray-500 dark:text-on-surface-variant">Fresher</p>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-black dark:text-on-surface mb-2">PROFILE</h4>
+<p class="font-body-md text-body-md text-gray-500 dark:text-on-surface-variant">Operational Recruiter</p>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-black dark:text-on-surface mb-2">Client Base</h4>
+<p class="font-body-md text-body-md text-gray-500 dark:text-on-surface-variant">US Based</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Skills Section -->
+<section class="section-padding bg-gray-50 dark:bg-surface-container-lowest transition-colors" id="skills">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="flex flex-col md:flex-row justify-between items-end mb-stack-lg border-b border-gray-200 dark:border-outline-variant/20 pb-stack-md">
+<div>
+<span class="font-label-caps text-label-caps text-gray-400 dark:text-primary uppercase mb-stack-sm block">02 / Expertise</span>
+<h2 class="font-headline-md text-headline-md text-black dark:text-on-surface">Core Competencies</h2>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-stack-lg">
+<div class="obsidian-card p-stack-lg">
+<span class="material-symbols-outlined text-black dark:text-primary mb-stack-md" style="font-size: 32px;">draw</span>
+<h3 class="font-headline-md text-headline-md mb-stack-sm text-black dark:text-on-surface">Interface Design</h3>
+<p class="font-body-md text-body-md text-gray-500 dark:text-on-surface-variant">High-fidelity UI kits, design systems, and minimalist aesthetics tailored for enterprise and luxury brands.</p>
+<div class="mt-stack-md flex flex-wrap gap-2">
+<span class="px-2 py-1 bg-gray-100 dark:bg-surface-variant text-label-caps text-[10px] rounded text-gray-600 dark:text-on-surface">FIGMA</span>
+<span class="px-2 py-1 bg-gray-100 dark:bg-surface-variant text-label-caps text-[10px] rounded text-gray-600 dark:text-on-surface">ADOBE CC</span>
+<span class="px-2 py-1 bg-gray-100 dark:bg-surface-variant text-label-caps text-[10px] rounded text-gray-600 dark:text-on-surface">PROTOPY</span>
+</div>
+</div>
+<div class="obsidian-card p-stack-lg">
+<span class="material-symbols-outlined text-black dark:text-primary mb-stack-md" style="font-size: 32px;">terminal</span>
+<h3 class="font-headline-md text-headline-md mb-stack-sm text-black dark:text-on-surface">Web Technology</h3>
+<p class="font-body-md text-body-md text-gray-500 dark:text-on-surface-variant">Building responsive, accessible, and performant web applications using modern front-end frameworks.</p>
+<div class="mt-stack-md flex flex-wrap gap-2">
+<span class="px-2 py-1 bg-gray-100 dark:bg-surface-variant text-label-caps text-[10px] rounded text-gray-600 dark:text-on-surface">REACT</span>
+<span class="px-2 py-1 bg-gray-100 dark:bg-surface-variant text-label-caps text-[10px] rounded text-gray-600 dark:text-on-surface">TAILWIND</span>
+<span class="px-2 py-1 bg-gray-100 dark:bg-surface-variant text-label-caps text-[10px] rounded text-gray-600 dark:text-on-surface">NEXT.JS</span>
+</div>
+</div>
+<div class="obsidian-card p-stack-lg">
+<span class="material-symbols-outlined text-black dark:text-primary mb-stack-md" style="font-size: 32px;">psychology</span>
+<h3 class="font-headline-md text-headline-md mb-stack-sm text-black dark:text-on-surface">Product Strategy</h3>
+<p class="font-body-md text-body-md text-gray-500 dark:text-on-surface-variant">Aligning business goals with user needs through comprehensive research, testing, and roadmapping.</p>
+<div class="mt-stack-md flex flex-wrap gap-2">
+<span class="px-2 py-1 bg-gray-100 dark:bg-surface-variant text-label-caps text-[10px] rounded text-gray-600 dark:text-on-surface">USER RESEARCH</span>
+<span class="px-2 py-1 bg-gray-100 dark:bg-surface-variant text-label-caps text-[10px] rounded text-gray-600 dark:text-on-surface">AB TESTING</span>
+</div>
+</div>
+<div class="obsidian-card p-stack-lg">
+<span class="material-symbols-outlined text-black dark:text-primary mb-stack-md" style="font-size: 32px;">psychology</span>
+<h3 class="font-headline-md text-headline-md mb-stack-sm text-black dark:text-on-surface">Candidate Sourcing</h3>
+<p class="font-body-md text-body-md text-gray-500 dark:text-on-surface-variant">Strong in candidate sourcing and selection, with an eye for the right-fit hire.</p>
+<div class="mt-stack-md flex flex-wrap gap-2">
+<span class="px-2 py-1 bg-gray-100 dark:bg-surface-variant text-label-caps text-[10px] rounded text-gray-600 dark:text-on-surface">RECRUITMENT PROCESS</span>
+<span class="px-2 py-1 bg-gray-100 dark:bg-surface-variant text-label-caps text-[10px] rounded text-gray-600 dark:text-on-surface">INTERVIEW TRAINING</span>
+<span class="px-2 py-1 bg-gray-100 dark:bg-surface-variant text-label-caps text-[10px] rounded text-gray-600 dark:text-on-surface">COMMUNICATION SKILLS</span>
+</div>
+</div>
+<div class="obsidian-card p-stack-lg">
+<span class="material-symbols-outlined text-black dark:text-primary mb-stack-md" style="font-size: 32px;">terminal</span>
+<h3 class="font-headline-md text-headline-md mb-stack-sm text-black dark:text-on-surface">Python Development</h3>
+<p class="font-body-md text-body-md text-gray-500 dark:text-on-surface-variant">Comfortable building with Python and data libraries like pandas, blending technical fluency with strong programming fundamentals.</p>
+<div class="mt-stack-md flex flex-wrap gap-2">
+<span class="px-2 py-1 bg-gray-100 dark:bg-surface-variant text-label-caps text-[10px] rounded text-gray-600 dark:text-on-surface">PYTHON</span>
+<span class="px-2 py-1 bg-gray-100 dark:bg-surface-variant text-label-caps text-[10px] rounded text-gray-600 dark:text-on-surface">PANDAS</span>
+<span class="px-2 py-1 bg-gray-100 dark:bg-surface-variant text-label-caps text-[10px] rounded text-gray-600 dark:text-on-surface">VS CODE</span>
+</div>
+</div>
+<div class="obsidian-card p-stack-lg">
+<span class="material-symbols-outlined text-black dark:text-primary mb-stack-md" style="font-size: 32px;">terminal</span>
+<h3 class="font-headline-md text-headline-md mb-stack-sm text-black dark:text-on-surface">GCP</h3>
+<p class="font-body-md text-body-md text-gray-500 dark:text-on-surface-variant">Hands-on with Google Cloud Platform (GCP) for building and deploying data-driven solutions.</p>
+<div class="mt-stack-md flex flex-wrap gap-2">
+<span class="px-2 py-1 bg-gray-100 dark:bg-surface-variant text-label-caps text-[10px] rounded text-gray-600 dark:text-on-surface">GCP</span>
+<span class="px-2 py-1 bg-gray-100 dark:bg-surface-variant text-label-caps text-[10px] rounded text-gray-600 dark:text-on-surface">CLOUD COMPUTING</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Experience Section -->
+<section class="section-padding bg-white dark:bg-surface transition-colors" id="experience">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-4">
+<span class="font-label-caps text-label-caps text-gray-400 dark:text-primary uppercase mb-stack-sm block">03 / Journey</span>
+<h2 class="font-headline-md text-headline-md text-black dark:text-on-surface">Experience</h2>
+</div>
+<div class="md:col-span-8 space-y-stack-lg">
+<!-- Role 1 -->
+<div class="flex flex-col md:flex-row md:items-baseline border-b border-gray-100 dark:border-outline-variant/10 pb-stack-lg">
+<span class="font-label-caps text-label-caps text-gray-500 dark:text-on-surface-variant md:w-32 mb-2 md:mb-0">PRES</span>
+<div class="flex-grow">
+<h3 class="font-headline-md text-headline-md text-black dark:text-on-surface">Operational Recruiter</h3>
+<p class="font-body-md text-body-md text-gray-600 dark:text-primary mb-stack-sm">Zynvixs • Hybrid</p>
+<p class="font-body-md text-body-md text-gray-500 dark:text-on-surface-variant">Supporting end-to-end candidate selection and technical recruiting, sourcing fit-first hires for fast-moving roles.</p>
+</div>
+</div>
+<!-- Role 2 -->
+<div class="flex flex-col md:flex-row md:items-baseline border-b border-gray-100 dark:border-outline-variant/10 pb-stack-lg">
+<span class="font-label-caps text-label-caps text-gray-500 dark:text-on-surface-variant md:w-32 mb-2 md:mb-0">2026</span>
+<div class="flex-grow">
+<h3 class="font-headline-md text-headline-md text-black dark:text-on-surface">Computer Center Intern</h3>
+<p class="font-body-md text-body-md text-gray-600 dark:text-primary mb-stack-sm">SGBAU Amravati • Remote</p>
+<p class="font-body-md text-body-md text-gray-500 dark:text-on-surface-variant">Completed a hands-on internship at the SGBAU Computer Center, supporting technical and operational tasks within a university IT environment.</p>
+</div>
+</div>
+<!-- Role 3 -->
+
+<div class="flex flex-col md:flex-row md:items-baseline border-b border-gray-100 dark:border-outline-variant/10 pb-stack-lg">
+<span class="font-label-caps text-label-caps text-gray-500 dark:text-on-surface-variant md:w-32 mb-2 md:mb-0">2025</span>
+<div class="flex-grow">
+<h3 class="font-headline-md text-headline-md text-black dark:text-on-surface">Intern at IPPB</h3>
+<p class="font-body-md text-body-md text-gray-600 dark:text-primary mb-stack-sm">IPPB Buldhana • Remote</p>
+<p class="font-body-md text-body-md text-gray-500 dark:text-on-surface-variant">Supported day-to-day banking operations and customer service processes at India Post Payments Bank, gaining hands-on exposure to financial service workflows.</p>
+</div>
+</div>
+<!-- Role 4 -->
+ <div class="flex flex-col md:flex-row md:items-baseline border-b border-gray-100 dark:border-outline-variant/10 pb-stack-lg">
+<span class="font-label-caps text-label-caps text-gray-500 dark:text-on-surface-variant md:w-32 mb-2 md:mb-0">2025</span>
+<div class="flex-grow">
+<h3 class="font-headline-md text-headline-md text-black dark:text-on-surface">Data Entry Operator</h3>
+<p class="font-body-md text-body-md text-gray-600 dark:text-primary mb-stack-sm">Collector office • Full-time</p>
+<p class="font-body-md text-body-md text-gray-500 dark:text-on-surface-variant">Handled data entry and record management at the Collector Office, supporting accurate and timely processing of administrative data.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Education & Certifications -->
+<section class="section-padding bg-gray-50 dark:bg-surface-container-lowest transition-colors" id="education">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-lg">
+<!-- Education -->
+<div>
+<span class="font-label-caps text-label-caps text-gray-400 dark:text-primary uppercase mb-stack-sm block">04 / Foundation</span>
+<h2 class="font-headline-md text-headline-md text-black dark:text-on-surface mb-stack-lg">Education</h2>
+<ul class="space-y-stack-md">
+<li class="obsidian-card p-stack-md">
+<h4 class="font-label-caps text-label-caps text-black dark:text-on-surface">M.Sc in Computer Science</h4>
+<p class="font-body-md text-body-md text-gray-500 dark:text-on-surface-variant">SGBA University • Persuing</p>
+</li>
+<li class="obsidian-card p-stack-md">
+<h4 class="font-label-caps text-label-caps text-black dark:text-on-surface">B.Sc in Computer Science</h4>
+<p class="font-body-md text-body-md text-gray-500 dark:text-on-surface-variant">MDC Buldhana • 2025</p>
+</li>
+
+<li class="obsidian-card p-stack-md">
+<h4 class="font-label-caps text-label-caps text-black dark:text-on-surface">12th Science Stream</h4>
+<p class="font-body-md text-body-md text-gray-500 dark:text-on-surface-variant">Aided Jr. College, Buldhana • 2022</p>
+</li>
+
+<li class="obsidian-card p-stack-md">
+<h4 class="font-label-caps text-label-caps text-black dark:text-on-surface">10th MH Board</h4>
+<p class="font-body-md text-body-md text-gray-500 dark:text-on-surface-variant">Aided High School, Buldhana • 2020</p>
+</li>
+</ul>
+</div>
+<!-- Certifications -->
+<div>
+<span class="font-label-caps text-label-caps text-gray-400 dark:text-primary uppercase mb-stack-sm block">05 / Recognition</span>
+<h2 class="font-headline-md text-headline-md text-black dark:text-on-surface mb-stack-lg">Certifications</h2>
+<ul class="space-y-stack-md">
+<li class="obsidian-card p-stack-md">
+<h4 class="font-label-caps text-label-caps text-black dark:text-on-surface">CLAUDE CERTIFICATION</h4>
+<p class="font-body-md text-body-md text-gray-500 dark:text-on-surface-variant">Anthropic • 2026</p>
+</li>
+<li class="obsidian-card p-stack-md">
+<h4 class="font-label-caps text-label-caps text-black dark:text-on-surface">GOOGLE CLOUD COMPUTING</h4>
+<p class="font-body-md text-body-md text-gray-500 dark:text-on-surface-variant">Google Cloud Skills • 2026</p>
+</li>
+<li class="obsidian-card p-stack-md">
+<h4 class="font-label-caps text-label-caps text-black dark:text-on-surface">PYTHON for Data Science</h4>
+<p class="font-body-md text-body-md text-gray-500 dark:text-on-surface-variant">IBM • 2024</p>
+</li>
+
+<li class="obsidian-card p-stack-md">
+<h4 class="font-label-caps text-label-caps text-black dark:text-on-surface">Responsive Web Design</h4>
+<p class="font-body-md text-body-md text-gray-500 dark:text-on-surface-variant">freeCodeCamp • 2023</p>
+</li>
+
+<li class="obsidian-card p-stack-md">
+<h4 class="font-label-caps text-label-caps text-black dark:text-on-surface">Javascript Algorithms and Data Structures</h4>
+<p class="font-body-md text-body-md text-gray-500 dark:text-on-surface-variant">freeCodeCamp • 2023</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="section-padding bg-white dark:bg-surface transition-colors" id="contact">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter text-center">
+<span class="font-label-caps text-label-caps text-gray-400 dark:text-primary uppercase mb-stack-sm block">06 / Inquiry</span>
+<h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg mb-stack-lg text-black dark:text-on-surface">Let's connect to build the future.</h2>
+<a class="text-[32px] md:text-[64px] font-bold text-black dark:text-on-surface hover:text-gray-600 dark:hover:text-primary transition-colors border-b-4 border-black/10 dark:border-primary/20 hover:border-black dark:hover:border-primary" href="https://mail.google.com/mail/?view=cm&fs=1&to=ayushujjainkar7@gmail.com" target="_blank" rel="noopener noreferrer">ayushujjainkar7@gmail.com</a>
+<div class="mt-section-gap flex flex-col md:flex-row justify-between items-center border-t border-gray-200 dark:border-outline-variant/30 pt-stack-lg gap-stack-md">
+<div class="flex gap-stack-lg">
+<a class="font-label-caps text-label-caps text-gray-500 dark:text-on-surface-variant hover:text-black dark:hover:text-primary" href="https://www.linkedin.com/in/ayush-shriram-ujjainkar-0b0b47283/">LINKEDIN</a>
+<a class="font-label-caps text-label-caps text-gray-500 dark:text-on-surface-variant hover:text-black dark:hover:text-primary" href="https://github.com/ujjainkar-ayush">GITHUB</a>
+</div>
+<p class="font-label-caps text-label-caps text-gray-500 dark:text-on-surface-variant">LOCAL TIME: <span id="time">00:00:00</span> GMT+1</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-stack-lg border-t border-gray-100 dark:border-outline-variant/20 bg-white dark:bg-surface transition-colors">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-gutter gap-stack-md">
+<span class="font-label-caps text-label-caps text-black dark:text-on-surface">AYUSH UJJAINKAR</span>
+<p class="font-body-md text-body-md text-gray-500 dark:text-on-surface-variant">2026 PORTFOLIO - AYUSH UJJAINKAR.</p>
+<div class="flex gap-6">
+<a class="text-gray-500 dark:text-on-surface-variant hover:text-black dark:hover:text-primary transition-colors font-body-md text-body-md" href="https://www.linkedin.com/in/ayush-shriram-ujjainkar-0b0b47283/">LinkedIn</a>
+<a class="text-gray-500 dark:text-on-surface-variant hover:text-black dark:hover:text-primary transition-colors font-body-md text-body-md" href="https://github.com/ujjainkar-ayush">GitHub</a>
+</div>
+</div>
+</footer>
+<script>
+    // Theme Toggle Logic
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const themeToggleIcon = document.getElementById('theme-toggle-icon');
+    const htmlElement = document.documentElement;
+
+    // Track theme in memory (localStorage is not available in this environment)
+    let currentTheme = 'dark';
+    if (currentTheme === 'light') {
+        htmlElement.classList.remove('dark');
+        themeToggleIcon.textContent = 'light_mode';
+    } else {
+        htmlElement.classList.add('dark');
+        themeToggleIcon.textContent = 'dark_mode';
+    }
+
+    themeToggleBtn.addEventListener('click', () => {
+        if (htmlElement.classList.contains('dark')) {
+            htmlElement.classList.remove('dark');
+            themeToggleIcon.textContent = 'light_mode';
+            currentTheme = 'light';
+        } else {
+            htmlElement.classList.add('dark');
+            themeToggleIcon.textContent = 'dark_mode';
+            currentTheme = 'dark';
+        }
+    });
+
+    // Scroll Progress Bar
+    window.addEventListener('scroll', () => {
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        document.getElementById('progress').style.width = scrolled + "%";
+    });
+
+    // Time Update
+    function updateTime() {
+        const now = new Date();
+        const timeStr = now.toLocaleTimeString('en-GB', { hour12: false });
+        const timeElement = document.getElementById('time');
+        if (timeElement) timeElement.textContent = timeStr;
+    }
+    setInterval(updateTime, 1000);
+    updateTime();
+
+    // Intersection Observer for active nav state
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('nav a');
+
+    const observerOptions = {
+        threshold: 0.5
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const id = entry.target.getAttribute('id');
+                navLinks.forEach(link => {
+                    const isDark = htmlElement.classList.contains('dark');
+                    
+                    // Reset all links
+                    link.classList.remove('text-primary', 'font-bold', 'border-b-2', 'border-primary', 'pb-1', 'text-black', 'border-black');
+                    link.classList.add('text-gray-500', 'dark:text-on-surface-variant');
+                    
+                    if (link.getAttribute('href') === `#${id}`) {
+                        link.classList.remove('text-gray-500', 'dark:text-on-surface-variant');
+                        link.classList.add('font-bold', 'border-b-2', 'pb-1');
+                        
+                        if (isDark) {
+                            link.classList.add('text-primary', 'border-primary');
+                        } else {
+                            link.classList.add('text-black', 'border-black');
+                        }
+                    }
+                });
+            }
+        });
+    }, observerOptions);
+
+    sections.forEach(section => observer.observe(section));
+</script>
+</body></html>
